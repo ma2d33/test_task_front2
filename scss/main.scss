@@ -14,10 +14,17 @@ $mediumScreen:999px;
 $ipad:767px;
 $iphoneX:499px;
 
+// colors
+$mainLoaderBg:rgba(228, 227, 227, 0.699);
+$mainLoaderTextColor:rgb(63, 63, 63);
+
+$loaderElementBg:#f3f3f3;
+$loaderElementColor:#3498db;
+
 .main-loader-container{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(228, 227, 227, 0.699);
+    background-color: $mainLoaderBg ;
     z-index: 50;
     position: fixed;
     top: 0;
@@ -26,7 +33,7 @@ $iphoneX:499px;
     p{
         font-size: 24px;
         font-style: italic;
-        color: rgb(63, 63, 63);
+        color: $mainLoaderTextColor;
         font-weight: 700;
         margin-top: -100px;
     }
@@ -37,9 +44,9 @@ $iphoneX:499px;
 }
 
 .main-loader {
-    border: 16px solid #f3f3f3;
+    border: 16px solid $loaderElementBg;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid $loaderElementColor;
     width: 120px;
     height: 120px;
     -webkit-animation: spin 2s linear infinite; 
@@ -58,7 +65,7 @@ $iphoneX:499px;
 
 
 
-    
+
     // screen sizes rule 
     @media only screen and (max-width:$mediumScreen){
         .container{
