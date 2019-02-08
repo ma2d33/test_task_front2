@@ -1,0 +1,103 @@
+/*
+    name:   frot test
+    author: J.Dubra
+    email:  ma2d33@gmail.com
+*/ 
+
+
+// important
+
+$imp : !important;
+
+// screem sizes
+$mediumScreen:999px;
+$ipad:767px;
+$iphoneX:499px;
+
+.main-loader-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(228, 227, 227, 0.699);
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    p{
+        font-size: 24px;
+        font-style: italic;
+        color: rgb(63, 63, 63);
+        font-weight: 700;
+        margin-top: -100px;
+    }
+}
+
+.middle{
+    margin: 10% auto;
+}
+
+.main-loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; 
+    animation: spin 2s linear infinite;
+  }
+  
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }}
+
+
+
+    
+    // screen sizes rule 
+    @media only screen and (max-width:$mediumScreen){
+        .container{
+            width:100% $imp;
+        }
+        .column_right_products_container{
+            width: 100% $imp;
+            div .product_horizontal{
+                width:32% $imp;
+            }
+        }
+    }
+
+    // screen sizes rule 
+    @media only screen and (max-width:$ipad){
+        body{
+            min-width: initial $imp;
+        }
+        .container{
+            width:100% $imp;
+        }
+        .column_right_products_container{
+            width: 100% $imp;
+            div .product_horizontal{
+                width:48% $imp;
+            }
+        }
+    }
+    
+    @media only screen and (max-width:$iphoneX){
+        .column_right_products_container{
+            width: 100% $imp;
+            div .product_horizontal{
+                width:100% $imp;
+                height: auto $imp;
+            }
+        }
+        .product__area{
+            width:97vw $imp;
+            
+        }
+    }
